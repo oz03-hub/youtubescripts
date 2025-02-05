@@ -77,7 +77,6 @@ def transcribe(collection, video_id):
                 tokenizer=processor.tokenizer,
                 feature_extractor=processor.feature_extractor,
                 torch_dtype=torch_dtype,
-                device=device,
             )
 
             result = pipe(

@@ -20,3 +20,4 @@ torch
 scipy
 beautifulsoup4
 progressbar2
+python-ffmpeg

@@ -10,3 +10,867 @@
 2025-02-05 11:19:30,627 - INFO - Started worker thread 6
 2025-02-05 11:19:30,627 - INFO - Started worker thread 7
 2025-02-05 11:19:30,628 - INFO - Started worker thread 8
+2025-02-05 19:41:39,074 - INFO - Starting transcription for collection: recs_dQw4w9WgXcQ_2_20250204_184511_046575
+2025-02-05 19:41:39,075 - INFO - Initializing Whisper model on cuda with torch.float16
+2025-02-05 19:41:39,484 - ERROR - Main thread error: Using `low_cpu_mem_usage=True` or a `device_map` requires Accelerate: `pip install 'accelerate>=0.26.0'`
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 127, in <module>
+    initialize_model()
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 43, in initialize_model
+    model = AutoModelForSpeechSeq2Seq.from_pretrained(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3535, in from_pretrained
+    raise ImportError(
+ImportError: Using `low_cpu_mem_usage=True` or a `device_map` requires Accelerate: `pip install 'accelerate>=0.26.0'`
+2025-02-05 19:42:48,043 - INFO - Starting transcription for collection: recs_dQw4w9WgXcQ_2_20250204_184511_046575
+2025-02-05 19:42:48,043 - INFO - Initializing Whisper model on cuda with torch.float16
+2025-02-05 19:44:06,760 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-02-05 19:44:22,251 - INFO - Model initialization complete
+2025-02-05 19:44:22,253 - INFO - Found 10 files to process
+2025-02-05 19:44:22,256 - INFO - Started worker thread 1
+2025-02-05 19:44:22,257 - ERROR - Error processing JFNdmVl2El4: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 74, in transcribe
+    pipe = pipeline(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/__init__.py", line 1178, in pipeline
+    return pipeline_class(model=model, framework=framework, task=task, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 220, in __init__
+    super().__init__(model, tokenizer, feature_extractor, device=device, torch_dtype=torch_dtype, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 930, in __init__
+    raise ValueError(
+ValueError: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+2025-02-05 19:44:22,267 - ERROR - Error processing QMW4AqbuSGg: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 74, in transcribe
+    pipe = pipeline(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/__init__.py", line 1178, in pipeline
+    return pipeline_class(model=model, framework=framework, task=task, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 220, in __init__
+    super().__init__(model, tokenizer, feature_extractor, device=device, torch_dtype=torch_dtype, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 930, in __init__
+    raise ValueError(
+ValueError: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+2025-02-05 19:44:22,269 - ERROR - Error processing W4Bv3SJffXo: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 74, in transcribe
+    pipe = pipeline(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/__init__.py", line 1178, in pipeline
+    return pipeline_class(model=model, framework=framework, task=task, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 220, in __init__
+    super().__init__(model, tokenizer, feature_extractor, device=device, torch_dtype=torch_dtype, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 930, in __init__
+    raise ValueError(
+ValueError: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+2025-02-05 19:44:22,270 - ERROR - Error processing XGxIE1hr0w4: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 74, in transcribe
+    pipe = pipeline(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/__init__.py", line 1178, in pipeline
+    return pipeline_class(model=model, framework=framework, task=task, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 220, in __init__
+    super().__init__(model, tokenizer, feature_extractor, device=device, torch_dtype=torch_dtype, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 930, in __init__
+    raise ValueError(
+ValueError: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+2025-02-05 19:44:22,273 - ERROR - Error processing a3WnvDtDD2M: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 74, in transcribe
+    pipe = pipeline(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/__init__.py", line 1178, in pipeline
+    return pipeline_class(model=model, framework=framework, task=task, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 220, in __init__
+    super().__init__(model, tokenizer, feature_extractor, device=device, torch_dtype=torch_dtype, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 930, in __init__
+    raise ValueError(
+ValueError: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+2025-02-05 19:44:22,275 - ERROR - Error processing dQw4w9WgXcQ: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 74, in transcribe
+    pipe = pipeline(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/__init__.py", line 1178, in pipeline
+    return pipeline_class(model=model, framework=framework, task=task, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 220, in __init__
+    super().__init__(model, tokenizer, feature_extractor, device=device, torch_dtype=torch_dtype, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 930, in __init__
+    raise ValueError(
+ValueError: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+2025-02-05 19:44:22,277 - ERROR - Error processing iAdOFyS-G2s: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 74, in transcribe
+    pipe = pipeline(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/__init__.py", line 1178, in pipeline
+    return pipeline_class(model=model, framework=framework, task=task, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 220, in __init__
+    super().__init__(model, tokenizer, feature_extractor, device=device, torch_dtype=torch_dtype, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 930, in __init__
+    raise ValueError(
+ValueError: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+2025-02-05 19:44:22,279 - ERROR - Error processing oADU2PIzhD0: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 74, in transcribe
+    pipe = pipeline(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/__init__.py", line 1178, in pipeline
+    return pipeline_class(model=model, framework=framework, task=task, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 220, in __init__
+    super().__init__(model, tokenizer, feature_extractor, device=device, torch_dtype=torch_dtype, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 930, in __init__
+    raise ValueError(
+ValueError: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+2025-02-05 19:44:22,281 - ERROR - Error processing x6Vzd4u84_4: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 74, in transcribe
+    pipe = pipeline(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/__init__.py", line 1178, in pipeline
+    return pipeline_class(model=model, framework=framework, task=task, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 220, in __init__
+    super().__init__(model, tokenizer, feature_extractor, device=device, torch_dtype=torch_dtype, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 930, in __init__
+    raise ValueError(
+ValueError: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+2025-02-05 19:44:22,285 - ERROR - Error processing xuCn8ux2gbs: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 74, in transcribe
+    pipe = pipeline(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/__init__.py", line 1178, in pipeline
+    return pipeline_class(model=model, framework=framework, task=task, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 220, in __init__
+    super().__init__(model, tokenizer, feature_extractor, device=device, torch_dtype=torch_dtype, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 930, in __init__
+    raise ValueError(
+ValueError: The model has been loaded with `accelerate` and therefore cannot be moved to a specific device. Please discard the `device` argument when creating your pipeline object.
+2025-02-05 19:44:22,286 - INFO - Transcription complete
+2025-02-05 19:48:15,470 - INFO - Starting transcription for collection: recs_dQw4w9WgXcQ_2_20250204_184511_046575
+2025-02-05 19:48:15,470 - INFO - Initializing Whisper model on cuda with torch.float16
+2025-02-05 19:48:16,054 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-02-05 19:48:20,608 - INFO - Model initialization complete
+2025-02-05 19:48:20,613 - INFO - Found 10 files to process
+2025-02-05 19:48:20,623 - INFO - Started worker thread 1
+2025-02-05 19:48:20,708 - ERROR - Error processing JFNdmVl2El4: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:48:20,764 - ERROR - Error processing QMW4AqbuSGg: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:48:20,798 - ERROR - Error processing W4Bv3SJffXo: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:48:20,832 - ERROR - Error processing XGxIE1hr0w4: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:48:20,862 - ERROR - Error processing a3WnvDtDD2M: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:48:20,894 - ERROR - Error processing dQw4w9WgXcQ: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:48:20,941 - ERROR - Error processing iAdOFyS-G2s: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:48:20,979 - ERROR - Error processing oADU2PIzhD0: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:48:21,013 - ERROR - Error processing x6Vzd4u84_4: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:48:21,065 - ERROR - Error processing xuCn8ux2gbs: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:48:21,068 - INFO - Transcription complete
+2025-02-05 19:50:02,296 - INFO - Starting transcription for collection: recs_dQw4w9WgXcQ_2_20250204_184511_046575
+2025-02-05 19:50:02,297 - INFO - Initializing Whisper model on cuda with torch.float16
+2025-02-05 19:50:02,767 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-02-05 19:50:07,205 - INFO - Model initialization complete
+2025-02-05 19:50:07,207 - INFO - Found 10 files to process
+2025-02-05 19:50:07,210 - INFO - Started worker thread 1
+2025-02-05 19:50:07,220 - ERROR - Error processing JFNdmVl2El4: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:50:07,244 - ERROR - Error processing QMW4AqbuSGg: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:50:07,252 - ERROR - Error processing W4Bv3SJffXo: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:50:07,261 - ERROR - Error processing XGxIE1hr0w4: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:50:07,270 - ERROR - Error processing a3WnvDtDD2M: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:50:07,279 - ERROR - Error processing dQw4w9WgXcQ: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:50:07,290 - ERROR - Error processing iAdOFyS-G2s: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:50:07,298 - ERROR - Error processing oADU2PIzhD0: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:50:07,308 - ERROR - Error processing x6Vzd4u84_4: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:50:07,316 - ERROR - Error processing xuCn8ux2gbs: ffmpeg was not found but is required to load audio files from filename
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 34, in ffmpeg_read
+    with subprocess.Popen(ffmpeg_command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as ffmpeg_process:
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oyilmazel_umass_edu/youtubescripts/transcribe_with_whisper.py", line 82, in transcribe
+    result = pipe(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 283, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1354, in __call__
+    return next(
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 269, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 33, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 186, in __next__
+    processed = next(self.subiterator)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 370, in preprocess
+    inputs = ffmpeg_read(inputs, self.feature_extractor.sampling_rate)
+  File "/home/oyilmazel_umass_edu/.conda/envs/ytb/lib/python3.10/site-packages/transformers/pipelines/audio_utils.py", line 37, in ffmpeg_read
+    raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
+ValueError: ffmpeg was not found but is required to load audio files from filename
+2025-02-05 19:50:07,318 - INFO - Transcription complete
