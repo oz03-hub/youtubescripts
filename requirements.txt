@@ -1,10 +1,22 @@
-speechbrain~=1.0.0
-torch~=2.3.1
-torchaudio~=2.3.1
-transformers>=4.41.2
-innertube~=2.1.16
-pandas~=2.2.2
-yt-dlp>=2024.5.27
-progressbar2~=4.4.2
-scipy~=1.13.1
-beautifulsoup4~=4.12.3
+# speechbrain~=1.0.0
+# torch~=2.3.1
+# torch
+# torchaudio~=2.3.1
+# transformers>=4.41.2
+# innertube~=2.1.16
+# pandas~=2.2.2
+# yt-dlp>=2024.5.27
+# progressbar2~=4.4.2
+# scipy~=1.13.1
+# beautifulsoup4~=4.12.3
+
+speechbrain
+torchaudio
+transformers
+innertube
+pandas
+yt-dlp
+torch
+scipy
+beautifulsoup4
+progressbar2

@@ -1,0 +1,12 @@
+2025-02-05 11:19:26,388 - INFO - Starting transcription for collection: recs_dQw4w9WgXcQ_2_20250204_184511_046575
+2025-02-05 11:19:26,388 - INFO - Initializing Whisper model on cpu with torch.float32
+2025-02-05 11:19:30,619 - INFO - Model initialization complete
+2025-02-05 11:19:30,620 - INFO - Found 10 files to process
+2025-02-05 11:19:30,623 - INFO - Started worker thread 1
+2025-02-05 11:19:30,625 - INFO - Started worker thread 2
+2025-02-05 11:19:30,625 - INFO - Started worker thread 3
+2025-02-05 11:19:30,626 - INFO - Started worker thread 4
+2025-02-05 11:19:30,626 - INFO - Started worker thread 5
+2025-02-05 11:19:30,627 - INFO - Started worker thread 6
+2025-02-05 11:19:30,627 - INFO - Started worker thread 7
+2025-02-05 11:19:30,628 - INFO - Started worker thread 8
