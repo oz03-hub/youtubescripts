@@ -874,3 +874,10 @@ Traceback (most recent call last):
     raise ValueError("ffmpeg was not found but is required to load audio files from filename") from error
 ValueError: ffmpeg was not found but is required to load audio files from filename
 2025-02-05 19:50:07,318 - INFO - Transcription complete
+2025-02-08 16:04:07,005 - INFO - Starting transcription for collection: recs_dQw4w9WgXcQ_2_20250204_184511_046575
+2025-02-08 16:04:07,005 - INFO - Initializing Whisper model on cuda with torch.float16
+2025-02-08 16:05:29,242 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-02-08 16:05:37,910 - INFO - Model initialization complete
+2025-02-08 16:05:37,912 - INFO - Found 10 files to process
+2025-02-08 16:05:37,914 - INFO - Started worker thread 1
+2025-02-08 16:07:43,775 - INFO - Transcription complete

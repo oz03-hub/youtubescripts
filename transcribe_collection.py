@@ -71,81 +71,81 @@ from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
 
 
 # convert wavs into generated transcripts using whisper
-device = "cpu"
-max_threads = 10
-torch_dtype = torch.float32
-model_id = "openai/whisper-large-v3"
+# device = "cpu"
+# max_threads = 10
+# torch_dtype = torch.float32
+# model_id = "openai/whisper-large-v3"
 
 
-def transcribe(collection, video_id):
-    model = AutoModelForSpeechSeq2Seq.from_pretrained(
-        model_id, torch_dtype=torch_dtype, use_safetensors=True
-    )
-    model.to(device)
-    processor = AutoProcessor.from_pretrained(model_id)
-    pipe = pipeline(
-        "automatic-speech-recognition",
-        model=model,
-        tokenizer=processor.tokenizer,
-        feature_extractor=processor.feature_extractor,
-        torch_dtype=torch_dtype,
-        device=device,
-    )
-    result = pipe(
-        os.path.join(ROOT_DIR, "collections", collection, "wavs", f"{video_id}.wav"),
-        generate_kwargs={
-            "max_new_tokens": 400,
-            "return_timestamps": True,
-        },
-    )
-    with open(
-        os.path.join(
-            ROOT_DIR,
-            "collections",
-            collection,
-            "transcripts",
-            f"{video_id}_whisper3.txt",
-        ),
-        "w",
-    ) as f:
-        f.write(result["text"])
+# def transcribe(collection, video_id):
+#     model = AutoModelForSpeechSeq2Seq.from_pretrained(
+#         model_id, torch_dtype=torch_dtype, use_safetensors=True
+#     )
+#     model.to(device)
+#     processor = AutoProcessor.from_pretrained(model_id)
+#     pipe = pipeline(
+#         "automatic-speech-recognition",
+#         model=model,
+#         tokenizer=processor.tokenizer,
+#         feature_extractor=processor.feature_extractor,
+#         torch_dtype=torch_dtype,
+#         device=device,
+#     )
+#     result = pipe(
+#         os.path.join(ROOT_DIR, "collections", collection, "wavs", f"{video_id}.wav"),
+#         generate_kwargs={
+#             "max_new_tokens": 400,
+#             "return_timestamps": True,
+#         },
+#     )
+#     with open(
+#         os.path.join(
+#             ROOT_DIR,
+#             "collections",
+#             collection,
+#             "transcripts",
+#             f"{video_id}_whisper3.txt",
+#         ),
+#         "w",
+#     ) as f:
+#         f.write(result["text"])
 
 
-collection = "recs_dQw4w9WgXcQ_2_20250204_184511_046575"
+# collection = "recs_dQw4w9WgXcQ_2_20250204_184511_046575"
 
-wav_files = [
-    filename
-    for filename in os.listdir(
-        os.path.join(ROOT_DIR, "collections", collection, "wavs")
-    )
-    if filename.endswith(".wav")
-]
+# wav_files = [
+#     filename
+#     for filename in os.listdir(
+#         os.path.join(ROOT_DIR, "collections", collection, "wavs")
+#     )
+#     if filename.endswith(".wav")
+# ]
 
-video_ids = [wav_file.split(".")[0] for wav_file in wav_files]
+# video_ids = [wav_file.split(".")[0] for wav_file in wav_files]
 
-total_videos = len(wav_files)
-pbar = progressbar.ProgressBar(
-    maxval=100, widgets=[progressbar.PercentageLabelBar()]
-).start()
-
-
-def worker(q):
-    while not q.empty():
-        video_id = q.get()
-        transcribe(collection, video_id)
-        pbar.update((total_videos - q.qsize()) / total_videos * 100)
-        q.task_done()
+# total_videos = len(wav_files)
+# pbar = progressbar.ProgressBar(
+#     maxval=100, widgets=[progressbar.PercentageLabelBar()]
+# ).start()
 
 
-q = Queue(maxsize=0)
-for video_id in video_ids:
-    q.put(video_id)
+# def worker(q):
+#     while not q.empty():
+#         video_id = q.get()
+#         transcribe(collection, video_id)
+#         pbar.update((total_videos - q.qsize()) / total_videos * 100)
+#         q.task_done()
 
-threads = []
-for i in range(max_threads):
-    work_thread = Thread(target=worker, args=(q,))
-    threads.append(work_thread)
-    work_thread.start()
+
+# q = Queue(maxsize=0)
+# for video_id in video_ids:
+#     q.put(video_id)
+
+# threads = []
+# for i in range(max_threads):
+#     work_thread = Thread(target=worker, args=(q,))
+#     threads.append(work_thread)
+#     work_thread.start()
 
 
 # converts a collection of transcripts to a csv including video ID, upload date, view count, and transcript, metadata.
